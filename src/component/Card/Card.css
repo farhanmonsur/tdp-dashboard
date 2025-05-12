@@ -1,0 +1,129 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* changed from 200px */
+    gap: 24px;
+    padding: 24px;
+    justify-items: center;
+  }
+  
+  .card-item {
+    width: 320px;
+    height: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-item img {
+    width: 100%;
+    height: calc(100% - 50px);  /* Reserve space for text */
+    object-fit: cover;
+  }
+  .card-item h3 {
+    height: 50px;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    color: #fff;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .modal-images img {
+    max-width: calc(50% - 5px);
+    height: 300;
+    border-radius: 8px;
+  }
+  
+  /* Carousel Controls BELOW images */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    gap: 20px;
+  }
+  
+  .carousel-controls button {
+    background-color: #eee;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .carousel-controls button:hover:not(:disabled) {
+    background-color: #ddd;
+  }
+  
+  .carousel-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color:#fff;
+  }
+  

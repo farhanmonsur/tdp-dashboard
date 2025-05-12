@@ -1,0 +1,64 @@
+.filterbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* label | discipline | year | country | reset */
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 20px 20px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+  
+  .filterbar_item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    min-width: 120px; /* Fix min width for stable size */
+  }
+  
+  .filterbar_label {
+    font-weight: bold;
+    cursor: default;
+    justify-content: flex-start;
+  }
+  
+  .filterbar_reset {
+    color: #dc2e27;
+    font-weight: bold;
+    justify-content: flex-end;
+  }
+  
+  .filterbar_reset:hover {
+    color: #c3201b;
+  }
+  
+  /* Dropdown related */
+  .filterbar_dropdown-wrapper {
+    position: relative;
+  }
+  
+  .filterbar_dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #2b2b2b;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 10;
+    min-width: 120px;
+  }
+  
+  .filterbar_dropdown-item {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .filterbar_dropdown-item:hover {
+    background-color: #dc2e27;
+  }
