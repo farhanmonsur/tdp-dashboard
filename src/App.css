@@ -4,13 +4,13 @@
 }
 
 nav{
-  background-color: #1a1a1a;
+  background-color:#1a1a1a;
   color: #cccccc;
   display: flex;
   align-items: center;
   justify-content:center;
   width:calc(100vw - 250px);
-  height:100px;
+  height:60px;
   font-size: 24px;
   position:sticky;
   top:0;

@@ -4,6 +4,8 @@ import Sidebar from "./layout/sidebar/sidebar";
 import Card from "./component/Card/Card";
 import TableauEmbed from "./component/EmbeddedTableau/EmbeddedTableau";
 import AboutUs from "./component/AboutUs/AboutUs";
+import Resources from "./component/Resources/Resources";
+import Predictions from "./component/Predictions/Predictions";
 
 
 function App() {
@@ -34,7 +36,11 @@ function App() {
       name:"Test_17440654636450/Dashboard4",
       staticImage:"https://public.tableau.com/static/images/Te/Test_17440654636450/Dashboard4/1.png"
     
-    }
+    },
+    keywords: {
+    name: "NLP_Visuals_17474530022060/KeywordAnalysis",
+    static_image: "https://public.tableau.com/static/images/NL/NLP_Visuals_17474530022060/KeywordAnalysis/1.png"
+  }
   };
 
   return (
@@ -45,9 +51,13 @@ function App() {
         <div className="outlet_container">
           {activeItem === "Data Stories" ? (
             <Card />
+          ) : activeItem === "Predictions" ? (
+            <Predictions />
           ) : activeItem === "About Us" ? (
             <AboutUs />
-          ) : (
+          ) : activeItem === "Resources" ? (
+            <Resources />
+          ) :(
             <TableauEmbed
               name={link[activeItem.toLowerCase()]?.name}
               staticImage={link[activeItem.toLowerCase()]?.static_image}

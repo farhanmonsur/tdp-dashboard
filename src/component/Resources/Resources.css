@@ -1,0 +1,29 @@
+.resources-container {
+  padding: 40px;
+  color: #fff;
+}
+
+.resources-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.resources-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resources-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.resources-list a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
+}

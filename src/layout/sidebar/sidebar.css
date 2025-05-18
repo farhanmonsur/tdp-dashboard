@@ -1,51 +1,68 @@
 .sidebar {
-  width: 200px;
+  width: 240px;
   background-color: #1a1a1a;
   color: #cccccc;
   height: 100vh;
   display: flex;
   flex-direction: column;
   position: sticky;
-  top:0;
-  overflow:hidden;
+  top: 0;
+  overflow: hidden;
+  box-shadow: brown;
 }
 
+/* Logo Section */
 .sidebar_logo-container {
   display: flex;
-  justify-content:center;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
 }
 
 .sidebar_logo {
-  width: 120px;
-  height: auto;
-  padding: 20px 0px;
+  max-height: 30px;
+  object-fit: contain;
 }
 
+/* Top Menu Section */
 .sidebar_menu {
   display: flex;
   flex-direction: column;
-  padding: 0 0px;
+  padding: 0;
   flex: 0.6;
 }
 
-.sidebar_menu-item {
+.sidebar_menu-item,
+.sidebar_bottom-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   padding: 20px 20px;
   font-size: 16px;
+  transition: background-color 0.2s ease;
 }
 
-.sidebar_menu-item:hover {
+.sidebar_menu-item:hover,
+.sidebar_bottom-item:hover {
   background: #dc2e27;
 }
 
-.sidebar_menu-item span:first-child {
-  margin-right: 10px;
+/* Icon and Text Alignment */
+.sidebar_menu-item-first-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
+/* Active State */
+.sidebar_menu-item.active,
+.sidebar_bottom-item.active {
+  background-color: #dc2e27;
+  color: #ffffff;
+}
+
+/* Submenu Styles */
 .sidebar_submenu {
   display: flex;
   flex-direction: column;
@@ -64,37 +81,20 @@
   background: #6b2623;
 }
 
+.sidebar_submenu-item.active {
+  background: #6b2623;
+  color: #ffffff;
+}
+
+/* Spacer for pushing bottom links */
 .spacer {
   flex-grow: 1;
 }
 
+/* Bottom Section */
 .sidebar_bottom-links {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.sidebar_bottom-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.sidebar_menu-item-first-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.sidebar_menu-item.active {
-  background-color: #dc2e27;
-  color: #ffffff; 
-}
-
-.sidebar_submenu-item.active{
-    background: #6b2623;
-    color: #ffffff; 
 }

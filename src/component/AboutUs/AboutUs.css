@@ -1,9 +1,9 @@
 .about-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 24px;
-    padding: 40px;
+    padding: 0px;
   }
   
   
@@ -51,4 +51,27 @@
   .profile-card a:hover {
     text-decoration: underline;
   }
+
+  .contributors-heading {
+  text-align: left;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.main-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px !important; /* Consistent sidebar */
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
   

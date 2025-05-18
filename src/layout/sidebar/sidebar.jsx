@@ -7,6 +7,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import DataExplorationIcon from '@mui/icons-material/DataExploration';
+import InsightsIcon from "@mui/icons-material/Insights";
 
 import "./sidebar.css";
 
@@ -24,6 +25,11 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
           className="sidebar_logo"
           src={"https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Logo_of_Swinburne_University_of_Technology.svg/1920px-Logo_of_Swinburne_University_of_Technology.svg.png"}
           alt="Swinburne University"
+        />
+        <img
+          className="sidebar_logo"
+          src={"https://pps-lab.com/images/funding/snsf.svg"}
+          alt="SNSF"
         />
       </div>
 
@@ -58,7 +64,7 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
         {/* Discovery Dropdown */}
         {isDiscoveryOpen && (
           <div className="sidebar_submenu">
-            {["Grants", "Contributors", "Diversity", "Impacts"].map((item) => (
+            {["Grants", "Contributors", "Diversity", "Impacts", "Keywords"].map((item) => (
               <div
                 key={item}
                 className={`sidebar_submenu-item ${activeItem === item ? "active" : ""}`}
@@ -80,6 +86,15 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
             <span>Data Stories</span>
           </div>
         </div>
+        <div
+          className={`sidebar_menu-item ${activeItem === "Predictions" ? "active" : ""}`}
+          onClick={() => setActiveItem("Predictions")}
+        >
+          <div className="sidebar_menu-item-first-section">
+            <InsightsIcon />
+            <span>Predictions</span>
+          </div>
+        </div>
       </div>
 
       <div className="spacer" />
@@ -90,13 +105,21 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
          className={`sidebar_menu-item ${activeItem === "About Us" ? "active" : ""}`}
           onClick={() => setActiveItem("About Us")}
         >
-          <span>About Us</span>
-          <ChevronRightIcon />
+          <div className="sidebar_menu-item-first-section">
+            <span>About Us</span>
+  
+          </div>
+          
         </div>
-        <div className="sidebar_bottom-item">
-          <span>Resources</span>
-          <ChevronRightIcon />
-        </div>
+        <div
+        className={`sidebar_menu-item ${activeItem === "Resources" ? "active" : ""}`}
+          onClick={() => setActiveItem("Resources")}
+        >
+  <div className="sidebar_menu-item-first-section">
+    <span>Resources</span>
+  
+  </div>
+</div>
       </div>
     </div>
   );
